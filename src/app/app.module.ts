@@ -22,6 +22,7 @@ import { TrainingService } from './training/training.service';
 // import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { environment } from '../environments/environment';
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     // AngularFirestore
+    AngularFireAuthModule
   ],
   providers: [AuthService, TrainingService],
   bootstrap: [AppComponent],
